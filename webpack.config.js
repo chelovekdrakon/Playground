@@ -7,8 +7,7 @@ const CSSPlugin = new ExtractTextPlugin('app.css');
 module.exports = {
     devtool: 'source-map',
     entry: [
-        path.join(__dirname, 'src/app2.js'),
-        path.join(__dirname, 'src/app.js')
+        path.join(__dirname, 'src/index.js')
     ],
     output: {
         filename: '[name].js',

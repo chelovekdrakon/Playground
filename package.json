@@ -4,6 +4,10 @@
   "main": "src/index.js",
   "author": "chelovekdrakon <MorauFiodar@yahoo.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
   "devDependencies": {
     "webpack": "^3.10.0"
   },

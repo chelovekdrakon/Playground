@@ -1,3 +1,9 @@
-import { App } from 'app';
+// import { testList } from './List';
+// testList();
+//
+// import { testStack } from './Stack';
+// testStack();
 
-new App.run();
+
+import { testQueue } from './Queue';
+testQueue();
