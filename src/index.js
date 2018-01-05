@@ -16,5 +16,8 @@
 // import {testSet} from './Set';
 // testSet();
 
-import {testBST} from './BST';
-testBST();
+// import {testBST} from './BST';
+// testBST();
+
+import {testGraph} from './Graph';
+testGraph();

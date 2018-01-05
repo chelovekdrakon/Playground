@@ -3,6 +3,7 @@ export default class Node {
         this.data = data;
         this.left = left;
         this.right = right;
+        this.count = 1;
     }
 
     show() {

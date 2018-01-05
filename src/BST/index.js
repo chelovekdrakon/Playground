@@ -25,3 +25,22 @@ export function testBST() {
     window.console.log(tree.remove(16));
     window.console.log(tree.inOrder());
 }
+
+
+
+function prArray(arr) {
+    window.console.log(arr[0]);
+
+    for (let i = 1; i < arr.length; ++i) {
+        window.console.log(arr[i]);
+    }
+}
+
+function genArray(length) {
+    const arr = [];
+
+    for (let i = 0; i < length; ++i) {
+        arr[i] = Math.floor(Math.random() * 101);
+    }
+    return arr;
+}

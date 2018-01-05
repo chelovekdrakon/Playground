@@ -170,4 +170,10 @@ export default class BST {
         }
     }
 
+    update(data) {
+        const grade = this.find(data);
+        grade.count++;
+        return grade;
+    }
+
 }
