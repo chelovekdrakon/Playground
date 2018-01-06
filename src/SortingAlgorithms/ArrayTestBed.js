@@ -27,7 +27,8 @@ export default class CArray {
         return this.dataStore.toString();
     }
 
-    swap(arr, index1, index2) {
+    swap(index1, index2) {
+        let arr = this.dataStore;
         let temp = arr[index1];
         arr[index1] = arr[index2];
         arr[index2] = temp;
@@ -40,12 +41,33 @@ export default class CArray {
 
             for (let inner = 0; inner < outer; inner++) {
                 if (this.dataStore[inner] > this.dataStore[inner + 1]) {
-                    this.swap(this.dataStore, inner, inner + 1);
+                    this.swap(inner, inner + 1);
                 }
             }
             window.console.log(`Passage number ${outer}: ${this.toString()}`);
         }
     }
+
+    selectionSort() {
+        window.console.log(`init array: ${this.toString()}`);
+
+        let min = null;
+        let temp = null;
+
+        for (let outer = 0; outer < this.numElements - 1; outer++) {
+            min = outer;
+
+            for (let inner = outer + 1; inner < this.numElements; inner++) {
+                if (this.dataStore[inner] < this.dataStore[min]) {
+                    min = inner;
+                }
+            }
+            this.swap(outer, min);
+            window.console.log(`Passage number ${outer}: ${this.toString()}`);
+        }
+    }
+
+
 
 
 }

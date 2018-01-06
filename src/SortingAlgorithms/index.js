@@ -7,7 +7,8 @@ export function testAlgorithms() {
     myNums.setData();
     // myNums.clear();
 
-    myNums.bubbleSort();
+    // myNums.bubbleSort();
+    myNums.selectionSort();
 
     window.console.log(myNums);
 
