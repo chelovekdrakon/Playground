@@ -51,11 +51,8 @@ export default class CArray {
     selectionSort() {
         window.console.log(`init array: ${this.toString()}`);
 
-        let min = null;
-        let temp = null;
-
         for (let outer = 0; outer < this.numElements - 1; outer++) {
-            min = outer;
+            let min = outer;
 
             for (let inner = outer + 1; inner < this.numElements; inner++) {
                 if (this.dataStore[inner] < this.dataStore[min]) {
@@ -67,7 +64,18 @@ export default class CArray {
         }
     }
 
+    insertionSort() {
+        window.console.log(`init array: ${this.toString()}`);
 
+        for (let outer = 1; outer < this.numElements; outer++) {
+            let inner = outer;
 
+            while (inner > 0 && this.dataStore[inner - 1] >= this.dataStore[outer]) {
+                this.dataStore[inner] = this.dataStore[inner - 1];
+                inner--;
+            }
+            window.console.log(`Passage number ${outer}: ${this.toString()}`);
+        }
+    }
 
 }
