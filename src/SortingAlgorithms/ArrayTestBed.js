@@ -35,7 +35,7 @@ export default class CArray {
     }
 
     bubbleSort() {
-        window.console.log(`init array: ${this.toString()}`);
+        // window.console.log(`init array: ${this.toString()}`);
 
         for (let outer = this.numElements; outer >= 0; outer--) {
 
@@ -44,12 +44,12 @@ export default class CArray {
                     this.swap(inner, inner + 1);
                 }
             }
-            window.console.log(`Passage number ${outer}: ${this.toString()}`);
+            // window.console.log(`Passage number ${outer}: ${this.toString()}`);
         }
     }
 
     selectionSort() {
-        window.console.log(`init array: ${this.toString()}`);
+        // window.console.log(`init array: ${this.toString()}`);
 
         for (let outer = 0; outer < this.numElements - 1; outer++) {
             let min = outer;
@@ -60,12 +60,12 @@ export default class CArray {
                 }
             }
             this.swap(outer, min);
-            window.console.log(`Passage number ${outer}: ${this.toString()}`);
+            // window.console.log(`Passage number ${outer}: ${this.toString()}`);
         }
     }
 
     insertionSort() {
-        window.console.log(`init array: ${this.toString()}`);
+        // window.console.log(`init array: ${this.toString()}`);
 
         for (let outer = 1; outer < this.numElements; outer++) {
             let inner = outer;
@@ -74,7 +74,7 @@ export default class CArray {
                 this.dataStore[inner] = this.dataStore[inner - 1];
                 inner--;
             }
-            window.console.log(`Passage number ${outer}: ${this.toString()}`);
+            // window.console.log(`Passage number ${outer}: ${this.toString()}`);
         }
     }
 
