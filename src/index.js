@@ -21,3 +21,6 @@
 
 // import {testGraph} from './Graph';
 // testGraph();
+
+import {testAlgorithms} from './SortingAlgorithms';
+testAlgorithms();
