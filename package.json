@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --port 8000 --hot --inline"
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.9.0",
