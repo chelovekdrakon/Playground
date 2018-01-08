@@ -8,8 +8,6 @@ export default class CArray {
         for (let i = numElements; i > 0; i--) {
             this.dataStore.push(i);
         }
-
-        this.gaps = [];
     }
 
     setData() {
@@ -87,9 +85,17 @@ export default class CArray {
     }
 
     shellSort() {
-        this.gaps.forEach( gap => {
+        const gaps = [1];
 
-            const len = this.numElements;
+        const len = this.numElements;
+        let h = 1;
+
+        while (h < len/3) {
+            h = 3 * h + 1;
+            gaps.unshift(h);
+        }
+
+        gaps.forEach( gap => {
 
             for (let outer = gap; outer < len; outer += gap) {
                 let value = this.dataStore[outer];
@@ -104,9 +110,4 @@ export default class CArray {
 
         });
     }
-
-    setGaps(arr) {
-        this.gaps = arr;
-    }
-
 }
