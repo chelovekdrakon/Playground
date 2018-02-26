@@ -1,0 +1,10 @@
+{
+  "port": 3000,
+  "mongoose": {
+    "uri": "mongodb://localhost/chat",
+    "options": {
+      "keepAlive": 300000,
+      "connectTimeoutMS": 30000
+    }
+  }
+}
